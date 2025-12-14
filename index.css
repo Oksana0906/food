@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f3f3f3;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.header span {
+  color: crimson;
+}
+
+/* LAYOUT */
+.layout {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* FILTERS */
+.filters {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.filters h3 {
+  margin: 10px 0;
+}
+
+.filters input[type="radio"] {
+  display: none;
+}
+
+.filters label {
+  display: block;
+  padding: 8px;
+  margin-bottom: 6px;
+  background: #e5e5e5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Активний фільтр */
+#cake:checked ~ label[for="cake"],
+#roll:checked ~ label[for="roll"],
+#cupcake:checked ~ label[for="cupcake"],
+#pie:checked ~ label[for="pie"] {
+  background: crimson;
+  color: #fff;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 380px;              /* ❗ було занадто велике */
+  object-fit: cover;
+  object-position: top;
+}
+
+.info {
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+/* FILTER LOGIC */
+#cake:checked ~ .gallery .card:not(.cake),
+#roll:checked ~ .gallery .card:not(.roll),
+#cupcake:checked ~ .gallery .card:not(.cupcake),
+#pie:checked ~ .gallery .card:not(.pie) {
+  filter: grayscale(100%);
+  opacity: 0.4;
+}
+
+/* FOOTER */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 730px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TABLET */
+@media (min-width: 730px) and (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+  .layout {
+    grid-template-columns: 250px 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    min-height: 420px;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Тортики & Тістечка</title>
+
+  <!-- Підключення CSS (файл існує окремо!) -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Тортики <span>&</span> Тістечка</h1>
+</header>
+
+<section class="layout">
+
+  <!-- ===== БЛОК ФІЛЬТРІВ ===== -->
+  <aside class="filters">
+    <h3>Категорії</h3>
+
+    <!-- Radio-кнопки для фільтрації (без JS) -->
+    <input type="radio" name="type" id="all" checked>
+    <input type="radio" name="type" id="cake">
+    <input type="radio" name="type" id="roll">
+    <input type="radio" name="type" id="cupcake">
+    <input type="radio" name="type" id="pie">
+
+    <!-- Кнопки-фільтри -->
+    <label for="all">Усі</label>
+    <label for="cake">Торт</label>
+    <label for="roll">Рулет</label>
+    <label for="cupcake">Тістечко</label>
+    <label for="pie">Пиріг</label>
+
+    <!-- Візуальний фільтр за калоріями -->
+    <h3>Калорії у порції</h3>
+    <input type="range" min="200" max="600">
+    <p>Від 200 до 600 ккал</p>
+  </aside>
+
+  <!-- ===== ГАЛЕРЕЯ ===== -->
+  <main class="gallery">
+
+    <article class="card cake">
+      <img src="img/image.png" alt="Торт Пташине молоко">
+      <div class="info">
+        <h4>Торт: Пташине молоко</h4>
+        <p>320 ккал</p>
+      </div>
+    </article>
+
+    
+
+    <article class="card cupcake">
+      <img src="img/image copy 2.png" alt="Сирник Три ягоди">
+      <div class="info">
+        <h4>Сирник: Три ягоди</h4>
+        <p>305 ккал</p>
+      </div>
+    </article>
+
+
+    <article class="card roll">
+      <img src="img/image copy 4.png" alt="Рулет Меренговий">
+      <div class="info">
+        <h4>Рулет: Меренговий</h4>
+        <p>380 ккал</p>
+      </div>
+    </article>
+
+   
+
+    <article class="card cake">
+      <img src="img/image copy 6.png" alt="Торт Меренговий">
+      <div class="info">
+        <h4>Торт: Меренговий</h4>
+        <p>400 ккал</p>
+      </div>
+    </article>
+
+    <article class="card pie">
+      <img src="img/image copy 8.png" alt="Пиріг Тертий">
+      <div class="info">
+        <h4>Пиріг: Тертий</h4>
+        <p>320 ккал</p>
+      </div>
+    </article>
+
+    <article class="card pie">
+      <img src="img/image copy 7.png" alt="Пиріг Карамельний">
+      <div class="info">
+        <h4>Пиріг: Карамельний</h4>
+        <p>380 ккал</p>
+      </div>
+    </article>
+
+  </main>
+</section>
+
+<footer class="footer">
+  <p>Контакти: kanapka.kiev.ua</p>
+  <p>© 2025 kanapka</p>
+</footer>
+
+</body>
+</html>
